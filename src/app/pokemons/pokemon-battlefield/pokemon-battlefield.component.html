@@ -1,0 +1,35 @@
+<div class="custom-container">
+  <span class="custom-title">Pokemon Battlefield</span>
+
+  <div class="custom-container-selected">
+    <div class="custom-card">
+      <div class="custom-card-image">
+        <ng-container *ngIf="PokemonsSelected.firstPokemon?.Name !== ''">
+          <img src="{{ PokemonsSelected.firstPokemon?.Image }}" alt="img" />
+        </ng-container>
+      </div>
+      <span class="custom-card-title">{{
+        PokemonsSelected.firstPokemon?.Name | titlecase
+      }}</span>
+    </div>
+
+    <span class="custom-title">VS.</span>
+
+    <div class="custom-card">
+      <div class="custom-card-image">
+        <ng-container *ngIf="PokemonsSelected.secondPokemon">
+          <img src="{{ PokemonsSelected.secondPokemon?.Image }}" alt="img" />
+        </ng-container>
+      </div>
+      <span class="custom-card-title">{{
+        PokemonsSelected.secondPokemon?.Name | titlecase
+      }}</span>
+    </div>
+  </div>
+
+  <span class="custom-title-battle" *ngIf="PokemonWinner.ganador !== ''"
+    >El ganador es: {{ PokemonWinner.ganador }} !!</span
+  >
+
+  <button class="custom-button" (click)="Fight()">Fight</button>
+</div>

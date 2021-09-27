@@ -1,0 +1,20 @@
+.custom-container-selected {
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.custom-card {
+  cursor: auto;
+}
+
+.custom-title-battle {
+  color: black;
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin: 30px 0;
+}
